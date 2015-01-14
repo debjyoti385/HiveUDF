@@ -22,18 +22,7 @@ Returns date key field, e.g. __FUNC__('2014-04-05T01:30:34Z') ISO 8601 format, _
 Returns date key field, e.g. __FUNC__('2014-04-05T01:30:34Z') ISO 8601 format, __FUNC__('2014-04-05 01:30:34') and __FUNC__(UNIX_TIMESTAMP('2014-04-05 01:30:34'))  returns 130
 ```
 
-5. Lookup UDF (for Lookup on any dimension table, Data Warehousing concept)
-```
-Takes input as __FUNC__('dimension', 'dimension_key', 'primary_col1','primary_col1_value','primary_col2','primary_col2_value', .... )
-returns 'dimension_key'_ value which is surrogate_key for dimension
-```
-
-```
-Note: Lookup -api uses guava cache to load the rows in advance, for faster execution.
-Number of connection to database has been limited  to number of mappers
-```
-
-6. Contains UDF
+5. Contains UDF
 ```
 __FUNC__(List<String>, String)
 returns true or false accordingly.
